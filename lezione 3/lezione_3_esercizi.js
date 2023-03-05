@@ -81,3 +81,20 @@ let tab=tabellina;
         console.log(min);
     }
  }
+
+ function numeroPrimo(x=5){
+    
+    if(x ===null || x ===undefined ){
+        return false;
+    }
+    if (typeof x == "string"){
+        x =parseInt(x);
+    }
+    if(x/x===1 && x/1===x && x%x===0){
+        return true;
+    }else{
+        return false;
+    }
+
+ }
+ console.log(numeroPrimo(8));

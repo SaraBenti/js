@@ -55,7 +55,7 @@ console.log(e);
 // dà Nan
 
 let g= stringa03==booleano01;
-console.log(g);
+console.log(g);//false
 
 let h = stringa02==booleano01;
 console.log(h);
