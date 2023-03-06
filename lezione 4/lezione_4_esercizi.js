@@ -6,14 +6,14 @@ console.log(calciatore.nome);
 delete calciatore.cognome;
 console.log(calciatore.cognome);
 
-let obg={};
+let obj={};
 function isEmpty(obj){
     for(key in obj){    
         return false;
 }
 return true;
 }
-console.log(isEmpty(obg));
+console.log(isEmpty(obj));
 
 var calciatori = [
     {nome: "Lorenzo", cognome: "Pellegrini", maglia: 10 },

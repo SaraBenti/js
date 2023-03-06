@@ -116,15 +116,3 @@ return false;
     str=str.replace(/\W/g,"");
     var len
  }
-
- function sommaNInteri(x){
-    if (x<0){
-        return false;
-    }
-    if(x==0){
-        return 0;
-    }else{
-   return (x+sommaNInteri(x-1));
-    }
- }
- //console.log(sommaNInteri(5));
