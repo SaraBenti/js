@@ -82,22 +82,40 @@ let tab=tabellina;
     }
  }
 
- function numeroPrimo(x=5){
-    
-    if(x ===null || x ===undefined ){
-        return false;
+ function numeroPrimo(num){
+    if(typeof num=="number" && num>=1){
+    for(let i=num;i>1;i--){
+        if (num%i==0){
+            return false;
+        }
     }
-    if (typeof x == "string"){
-        x =parseInt(x);
-    }
-    if(x/x===1 && x/1===x && x%x===0){
-        return true;
-    }else{
-        return false;
-    }
-
+    return true;
+}
+return false;
  }
- console.log(numeroPrimo(8));
+
+ function stampaNumeriPrimi(n){
+    if(typeof n=="number" && n>=1){
+        let i =1;
+        while (n>=1){
+            if(numeroPrimo(i)){
+                console.log(n);
+                n--;
+            }
+            i++;
+
+        }
+    }
+ }
+    
+ 
+ console.log(numeroPrimo(7));
+ console.log(stampaNumeriPrimi(10));
+
+ function checkPalindromo(str){
+    str=str.replace(/\W/g,"");
+    var len
+ }
 
  function sommaNInteri(x){
     if (x<0){
@@ -109,4 +127,4 @@ let tab=tabellina;
    return (x+sommaNInteri(x-1));
     }
  }
- console.log(sommaNInteri(5));
+ //console.log(sommaNInteri(5));
