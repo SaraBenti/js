@@ -105,3 +105,9 @@ class auto{
      
    
 }
+//rimuovi auto →if indice>0
+
+//slice (indice,1) elimina un elemento e l'indice per l'elemento successivo cambia perchè prende il posto di quello
+//precedente e quindi slice evita buchi negli indici
+//io posso navigare l'array di automobili mentre in una classe devo richiedere specificatamente l'auto ma la classe è un contenitore
+//di proprietà
