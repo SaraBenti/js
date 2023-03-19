@@ -1,3 +1,6 @@
+/**
+ * SOMMA
+ */
 function somma(){
     let tot=0;
     let valore;
@@ -15,6 +18,29 @@ function somma(){
 let risultato=somma(1,3,4,"62");
 console.log(risultato);
 
+/**
+ * FATTORIALE
+ */
+function fattoriale(num){
+    //se il numero è < di 0 lo scarto
+    if(num<0){
+        return -1;
+    }
+
+    //se il numero è = a 0 ritorna 1 per definizione
+    if(num=0){
+        return 1;
+    }
+    //in tutti gli altri casi
+    else{
+        return (num*fattoriale(num-1));
+    }
+
+}
+
+/**
+ * STAMPA I PRIMI 10 NUMERI
+ */
 //funzione solo con blocco istruzioni senza return
 function stampaAConsoleIPrimiDieciNumeri(){
     for (let i=1; i<=10;i++){
@@ -23,6 +49,9 @@ function stampaAConsoleIPrimiDieciNumeri(){
 }
 stampaAConsoleIPrimiDieciNumeri();
 
+/**
+ * NUMERO PARI O DISPARI (2 tipi di funzioni)
+ */
 function isNumeroPariODispari(x=2){//comportamento di default nel caso che 
     //x non sia valorizzata per non avere problemi nel programma
     let y= x%2;
