@@ -388,3 +388,57 @@ garage.inserisciAuto(auto2);
 garage.rimuoviVeicolo(auto2);
 
 garage.stampaAuto("Fiat");
+
+/**
+ * Scrivi un costruttore Calcolatrice che crea
+oggetti con 4 metodi:
+leggi() richiede due valori come argomento della
+funzione e li memorizza nelle proprietà
+dell’oggetto.
+somma() ritorna la somma delle proprietà.
+moltiplica() ritorna il prodotto delle proprietà.
+dividi() ritorna la divisione delle proprietà
+ */
+function Calcolatrice(){
+    
+        this.leggi=function(a,b){
+            if(typeof a=="number" && typeof b=="number"){
+            this.leggi1=a;
+            this.leggi2=b;
+           
+        }else{
+            return false;
+        }
+        }
+    
+        this.somma=function(){
+        
+            let risultato =this.leggi1+this.leggi2;
+            return risultato;
+        
+    }
+    
+        this.moltiplica=function(){
+        
+            let risultato=this.leggi1*this.leggi2;
+            return risultato;
+        
+    }
+    
+        this.dividi =function(){
+            
+            if(this.leggi2 !==0){
+                let risultato=this.leggi1/this.leggi2;
+                return risultato;
+            
+            }else{
+                return Nan;
+            }
+        
+    }
+    }
+    let x= new Calcolatrice();
+    x.leggi(10,5);
+    console.log(x.moltiplica());
+    console.log(x.dividi());
+    console.log(x.somma());
