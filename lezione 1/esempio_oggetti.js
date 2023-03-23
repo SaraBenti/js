@@ -10,3 +10,4 @@ let secondi = [
 ];
 let menu = { menu: { primi: primi, secondi: secondi } };
 console.log(menu.menu.secondi[1].prezzo);
+
