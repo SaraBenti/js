@@ -15,5 +15,16 @@ hello.addEventListener("submit",a);
 //il comando submit interagisce solo se nell'HTML sono all'interno di un form
 //se non avessi creato il form avrei dovuto mettere il comando click al posto del submit
 
-   
+let contatto={
     
+        nome:"Sara",
+        cognome:"Benti",
+        eta:43
+   
+}
+    
+let j=JSON.stringify(contatto);
+function json(stringa){
+    let c =JSON.parse(stringa);
+    return c;
+}

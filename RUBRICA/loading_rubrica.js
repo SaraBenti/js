@@ -127,3 +127,33 @@ function visualizzaForm() {
 }
 
 setTimeout(stampaContatti(), 5000);
+
+//eseguo request su rubrica con promessa
+function eseguiGet() {
+    return new Promise(function(resolve,reject){
+    let xhr = new XMLHttpRequest();
+    xhr.onload=function(){
+        let data;
+        if(xhr.status==200){
+            data=JSON.parse(xhr.response);
+            resolve (data);
+        }else{
+            reject(new Error(xhr.statusText));
+        }
+    }
+    xhr.open("GET", "./rubrica.html")
+    xhr.responseType = "json";
+    xhr.send();
+
+    xhr.onload = function () {
+        stampaContatti(xhr.response);
+    }
+
+    xhr.onerror = function () {
+
+    }
+});
+}
+let promessa=eseguiGet();
+promessa.then(data)=>stampaContatti(data)
+.catch ((error)=>console.log(error));
