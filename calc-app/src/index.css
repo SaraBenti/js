@@ -15,3 +15,7 @@ code {
 .w-200px{
   width:300px !important;
 }
+
+.min-height-80px {
+  min-height: 90px!important;
+}

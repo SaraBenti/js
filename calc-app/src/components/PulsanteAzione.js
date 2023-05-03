@@ -1,14 +1,36 @@
 import React from "react";
 
 class PulsanteAzione extends React.Component {
-    onClickAzione() {
-        let azione = this.props.label;
-        if (azione === "AC") {
-            this.setState("displayNumero", 0);
-        }
+
+    constructor() {
+        super();
+        this.onClick.bind(this);
+        this.hasClick = false;
     }
+
+    onClick = () => {
+        this.props.onClick();
+        this.hasClick = true;
+    }
+
     render() {
-        return (<button onClick={this.onClickAzione} className="btn d-block btn-warning w-100">{this.props.label}</button>);
+        const { refresh, label } = this.props;
+        let classBtn = "";
+        if ((refresh === true && this.hasClick === false) || (refresh === false)) {
+            classBtn = "btn-warning";
+        } else {
+            classBtn = "btn-info";
+        }
+
+        if (label === "AC") {
+            classBtn = "btn-danger";
+        }
+        //console.log(refresh, this.hasClick, label, classBtn);
+        return (<button onClick={this.onClick} className={`btn d-block w-100 ${classBtn}`}>{this.props.label}</button>);
+    }
+
+    componentDidUpdate() {
+        this.hasClick = false;
     }
 }
 
